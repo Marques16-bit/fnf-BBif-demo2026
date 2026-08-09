@@ -46,3 +46,4 @@ jobs:
         with:
           name: Mobile-Porter-android
           path: export/release/android
+          if-no-files-found: error
