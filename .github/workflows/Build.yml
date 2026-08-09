@@ -1,4 +1,4 @@
-name: Build Mobile-Porter
+Name: Build Mobile-Porter
 
 on:
   push:
@@ -20,22 +20,19 @@ jobs:
 
       - name: Install and Setup Lime
         run: |
-         haxelib install lime --quiet
-         haxelib run lime setup -y
-
-         - name: Install Haxelibs
-           run: |
-            haxelib install lime
-            haxelib install openfl
-            haxelib install flixel
-            haxelib install flixel-tools
-            haxelib install flixel-addons
-            haxelib install flixel-ui
-
-      - name: Install dependencies
-        run: |
           haxelib install lime --quiet
+          haxelib run lime setup -y
+
+      - name: Install Haxelibs
+        run: |
           haxelib install openfl --quiet
+          haxelib install flixel --quiet
+          haxelib install flixel-tools --quiet
+          haxelib install flixel-addons --quiet
+          haxelib install flixel-ui --quiet
+
+      - name: Setup Android Target
+        run: |
           haxelib run lime setup android --quiet
 
       - name: Build android
