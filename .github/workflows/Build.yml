@@ -31,37 +31,10 @@ jobs:
           haxelib run lime setup android --quiet
 
       - name: Build android
-        run: lime build android
+        run: haxelib run lime build android
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Mobile-Porter-android
           path: export/release/android
-
-  build-ios:
-    name: Build Ios
-    runs-on: macos-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Haxe
-        uses: krdlab/setup-haxe@v1
-        with:
-          haxe-version: 4.3.4
-
-      - name: Install dependencies
-        run: |
-          haxelib install lime --quiet
-          haxelib install openfl --quiet
-          haxelib run lime setup ios --quiet
-
-      - name: Build ios
-        run: lime build ios
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Mobile-Porter-ios
-          path: export/release/ios
