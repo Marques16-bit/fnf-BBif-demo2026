@@ -35,6 +35,8 @@ jobs:
           haxelib install flixel-animate --quiet
           haxelib install hscript-iris --quiet
           haxelib install hxvlc --quiet
+          haxelib install hxdiscord_rpc --quiet
+          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit --quiet
 
       - name: Setup Android Target
         run: |
