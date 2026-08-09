@@ -18,6 +18,12 @@ jobs:
         with:
           haxe-version: 4.3.4
 
+      - name: Install and Setup Lime
+        run: |
+         haxelib install lime
+         haxelib run lime setup
+
+
       - name: Install dependencies
         run: |
           haxelib install lime --quiet
