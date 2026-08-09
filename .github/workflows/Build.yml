@@ -1,4 +1,4 @@
-Name: Build Mobile-Porter
+name: Build Mobile-Porter
 
 on:
   push:
