@@ -30,6 +30,10 @@ jobs:
           haxelib install flixel-tools --quiet
           haxelib install flixel-addons --quiet
           haxelib install flixel-ui --quiet
+          haxelib install tjson --quiet
+          haxelib install hxjsonast --quiet
+          haxelib install SScript --quiet
+          haxelib install hxvlc --quiet
 
       - name: Setup Android Target
         run: |
