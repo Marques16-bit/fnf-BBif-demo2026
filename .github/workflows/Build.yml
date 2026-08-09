@@ -34,6 +34,7 @@ jobs:
           haxelib install hxjsonast --quiet
           haxelib install SScript --quiet
           haxelib install hxvlc --quiet
+          haxelib install hxIni --quiet
 
       - name: Setup Android Target
         run: |
