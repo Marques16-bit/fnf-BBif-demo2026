@@ -21,7 +21,7 @@ jobs:
       - name: Install and Setup Lime
         run: |
          haxelib install lime
-         haxelib run lime setup
+         haxelib run lime setup -y
 
          - name: Install Haxelibs
            run: |
